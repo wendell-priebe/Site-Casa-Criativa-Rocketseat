@@ -1,0 +1,270 @@
+/*GLOBAL*/
+body {
+    color:black;
+    background-color: rgba(213, 247, 255, 0.863);
+    margin: 20px 0 0 0; /*margin 0, sem margin*/
+    font-family: 'Montserrat','sans-serit';
+
+}
+body.hideScroll{
+    overflow: hidden;
+}
+.hide{
+    display: none;
+}
+a {/* regras para todos os link*/
+    color: #ff5e84;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{ /*linha quando passa mouse no link*/ 
+    text-decoration: underline;
+}
+p, .description{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+.button{
+    color: white;
+    background-color: #ff5e84;
+    width: 110px;
+    height: 40px;
+    box-shadow: 10px 8px 16px #ff5e8444;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover{
+    text-decoration: none; /* sem linha no botao ver ideias quando passa mouse*/
+    background-color: #0984e3;
+}
+/*Padrao*/
+#container{
+    width: 90%;    /*usa 90% da pagina*/
+    max-width: 980px; /*largura maxima*/
+    
+    margin-left: auto;  /*alinhamento auto a esquerda*/
+    margin-right: auto;   /*alinhamento auto a direita*/     /*tem a opçao de agrupar os 2 margin em 1 linha*//*= margin:40px 0;*/
+
+    display: flex; /*filhos do container em fila*/
+}
+#intro{
+    width: 400px;
+    margin-right: 32px;
+}
+main{
+    margin: 32px 0 ;   /* margin agrupada*/
+}
+/**/
+#buttons{
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: space-evenly; /*espaço entre botões*/
+}
+button{
+    color: #ff5e84;
+    border: none;
+    
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px; 
+    border-radius: 5px; /*arredonda borda botao*/
+    cursor: pointer; /*quando passa curso acima muda para mao com dedo para click*/
+    outline: none;/* remove a borda quando click no botao*/
+}
+button:hover{
+    text-decoration: underline; /*linha quando passa mouse*/
+}
+#footer, button{
+    text-align: center;
+}
+footer{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #777;
+}
+footer a{
+    opacity: 0.7; /*opacidade do link, pode usar em outros text...*/
+}
+.ideia{
+    display: flex;
+
+    background-color: #fff;/*cor fundo box*/
+    box-shadow: 0 4px 16px -8px;
+    border-radius: 8px;
+    
+    padding: 20px;
+    
+    margin-bottom: 20px;
+}
+.ideia img{ /*tamanho e alinhamento img das box*/
+    width: 60px;
+    height: 60px;
+    margin-right: 32px;
+}
+.ideia h3{
+    margin:0;
+}
+.ideia p{
+    margin: 8px 0;
+    color: #777;
+}
+.ideia .description{
+    margin: 10px 0;
+}
+/*modal*/
+#modal{
+    background-color: #ff5e84;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /*width: 100vw;/*100vw 100% do tamanho da pagina largura*/
+    /*height: 100vh;/*100vh 100% do tamanho da pagina altura*/
+    
+    display: flex;
+    align-items: center;/*alinha conteudo eixo x*/
+    justify-content: center;/*alinha conteudo eixo y*/
+}
+#modal.addScroll{
+    overflow: auto;
+}
+#modal .content{
+    margin-top: 0px;
+    color: white;
+}
+#modal .content h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+#modal form{
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*separa em 2 colunas*/
+    gap: 20px;
+}
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5){
+    grid-column: span 2;
+}
+form input, form textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border:1px solid red;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+form label{
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+
+}
+form a{
+    background-color: #ffffff22;
+    color: white;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 150px;
+    height: 40px;
+    
+    align-self: end;
+    
+    border-radius: 6px;
+    
+    font-weight: bold;
+    font-size: 14px;
+
+    transition: 400ms;
+}
+form a:hover{
+    background: #fff;
+    color: blue;
+    text-decoration: none;
+}
+form button{
+     background-color: white;
+     width: 150px;
+     height: 40px;
+     border-radius: 6px;
+     cursor: pointer;
+     margin-top: 32px;
+     grid-column: 2;
+     justify-self: end;
+}
+form button:hover{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
+#modal.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*       IDEIA.HTML           */
+#page-ideias #container{
+    display: block;
+}
+#page-ideias header{
+    display: flex;
+    justify-content: space-between;   
+}
+#page-ideias nav{
+    display: flex;
+    align-items: center;
+}
+#page-ideias nav li{
+    list-style-type: none;
+    margin-right: 16px;
+}
+#page-ideias nav li a{
+    color: #25282b;
+}#page-ideias nav li a.button{
+    color: white;
+}
+#page-ideias nav li:last-child{
+    margin: 0;
+}
+section#title{
+    text-align: center;
+}
+section#title p{
+    opacity: 0.7;
+    margin: 0;
+}
+section#title h1{
+    margin: 0;
+    font-size: 28px;
+}
+section#ideias{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+section#ideias .ideia{
+    margin: 0;
+}
+section#ideias,
+section#title,
+footer{
+    margin-top: 32px;
+}

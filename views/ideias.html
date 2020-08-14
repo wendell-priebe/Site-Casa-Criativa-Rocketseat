@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Ideias - Casa Criativa</title>
+{% endblock title %}
+
+{% set bodyId = "page-ideias" %}
+
+{% block content %}
+<header>
+    <a href="/">
+        <img src="/img/logo.png" alt="Img Logo" width="250" height="100">
+    </a>
+    <nav>
+        <li><a href="/">Início</a></li>
+        <li><a class="button" href="#" onclick="onOff()">Nova Ideia</a></li>
+    </nav>
+</header>
+<section id="title">
+    <p>em exibição</p>
+    <h1>Ideias</h1>
+</section>
+<main>
+    <section id="ideias">
+        <!--ideias-->
+        {% include "all_ideias.html" %}   
+    </section>
+</main>
+<footer id="footer">
+    Com ❤ <a href="https://www.linkedin.com/in/wendell-priebe-0113031a1/" target="_blank">Priebe</a>
+</footer>
+{% endblock %}
