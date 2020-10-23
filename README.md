@@ -2,7 +2,7 @@
 <p>Foi criado um projeto simple para pessoas cadastrarem suas ideias de atividades durante o periodo de quarentena. Site criado na semana DevIniciante da Rocketseat.</p>
 <h2>Tecnologias:</h2>
  <ul>
-    <li>HTML</li>
+    <li>HTML/Nunjucks</li>
     <li>CSS</li>
     <li>JavaScript</li>
     <li>NodeJS</li>
